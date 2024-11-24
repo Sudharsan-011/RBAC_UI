@@ -1,0 +1,81 @@
+rbac-ui/
+│
+├── public/
+│   ├── index.html           # The main HTML file
+│   └── assets/              # Static assets like images, fonts, etc.
+│
+├── src/
+│   ├── components/          # Reusable components for UI
+│   │   ├── Header.js        # App header (navigation, branding, etc.)
+│   │   ├── Sidebar.js       # Sidebar component (for admin dashboard)
+│   │   ├── UserTable.js     # Displays users in a table format
+│   │   ├── RoleTable.js     # Displays roles in a table format
+│   │   ├── PermissionsForm.js # Allows editing/assigning permissions
+│   │   └── Modal.js         # Generic modal for adding/editing users or roles
+│   │
+│   ├── context/             # Context-related files for global state management
+│   │   ├── AuthContext.js   # Context for authentication (user login state)
+│   │   ├── RolesContext.js  # Context for managing roles
+│   │   ├── PermissionsContext.js # Context for managing permissions
+│   │   └── GlobalStateProvider.js # Provider component that wraps the app and provides contexts
+│   │
+│   ├── pages/               # Page components for each section of the app
+│   │   ├── Dashboard.js     # Dashboard page with user, role, and permission management
+│   │   ├── Users.js         # User management page
+│   │   ├── Roles.js         # Role management page
+│   │   └── Permissions.js   # Permissions management page
+│   │
+│   ├── services/            # API calls and mock API simulations
+│   │   ├── api.js           # Axios API calls (CRUD operations for users, roles, etc.)
+│   │   └── mockApi.js       # Mock API for simulating backend calls (optional)
+│   │
+│   ├── styles/              # Styles for the app
+│   │   ├── tailwind.config.js # Tailwind CSS configuration
+│   │   └── globals.css      # Global styles (optional)
+│   │
+│   ├── App.js               # Main App component (global layout and routing)
+│   ├── index.js             # Entry point for React app
+│   └── setupTests.js        # Test setup (if using Jest/Testing Library)
+│
+├── package.json             # Project dependencies and scripts
+└── README.md                # Project overview and setup instructions
+
+
+
+
+
+??////////////////////////////
+rbac-backend/
+│
+├── controllers/            # Controllers for handling requests
+│   ├── authController.js   # Authentication logic (login, signup)
+│   ├── userController.js   # User management logic
+│   ├── roleController.js   # Role management logic
+│   └── permissionController.js # Permission management logic
+│
+├── models/                 # Mongoose models for the database
+│   ├── User.js             # User schema
+│   ├── Role.js             # Role schema
+│   └── Permission.js       # Permission schema
+│
+├── routes/                 # Route handlers
+│   ├── authRoutes.js       # Routes for authentication
+│   ├── userRoutes.js       # Routes for user management
+│   ├── roleRoutes.js       # Routes for role management
+│   └── permissionRoutes.js # Routes for permission management
+│
+├── middleware/             # Middleware for request processing
+│   ├── authMiddleware.js   # Protects routes (JWT verification)
+│   └── roleMiddleware.js   # Role-based access checks
+│
+├── config/                 # Configuration files
+│   ├── db.js               # Database connection setup
+│   └── keys.js             # Secret keys and environment variables
+│
+├── utils/                  # Utility functions
+│   └── generateToken.js    # JWT token generation
+│
+├── .env                    # Environment variables
+├── app.js                  # Main Express application
+├── server.js               # Server setup
+└── package.json            # Project dependencies and scripts

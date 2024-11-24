@@ -1,0 +1,7 @@
+/* index.css or tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    @apply bg-gradient-to-r from-blue-500 to-green-500; /* Gradient from blue to green */
+  }
